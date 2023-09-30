@@ -1,11 +1,11 @@
-<nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-lg shadow-lg ">
-  <div class="container-fluid"> 
+<nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+  <div class="max-w-screen-xl flex flex-wrap mx-auto p-4"> 
     <% if  current_user.present? %>
       <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" >
         <span class="navbar-toggler-icon"></span>
       </button>
     <% end %>
-    <%= link_to "KWH", root_path, class: "navbar-brand" %>
+    <%= link_to "KWH", root_path, class: " text-2xl font-semibold whitespace-nowrap dark:text-white" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
