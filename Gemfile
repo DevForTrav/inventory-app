@@ -7,7 +7,6 @@ ruby "3.0.3"
 gem "rails", "~> 7.0.6"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-# gem "sprockets-rails"
 gem 'propshaft'
 
 # Use postgresql as the database for Active Record
@@ -50,7 +49,7 @@ gem "bootsnap", require: false
 gem 'pgcrypto', '~> 0.4.1'
 
 # Use Sass to process CSS
-gem "sassc-rails"
+# gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -83,3 +82,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "importmap-rails", "~> 1.2"
+
+gem "tailwindcss-rails", "~> 2.0"
