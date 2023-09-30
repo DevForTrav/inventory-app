@@ -1,0 +1,33 @@
+<div id="<%= dom_id wiring_harness %>" class="col">
+  <div class="card shadow" >
+    <div class="card-body">
+      <h5 class="card-title"><%= "#{wiring_harness.name.titleize} Harness" %></h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary"><%= "#{wiring_harness.company.titleize}"%></h6>
+
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+
+      <p>
+        <strong>Weekly quantity:</strong>
+        <%= wiring_harness.weekly_quota %>
+      </p>
+
+      <p>
+        <strong>Harnesses completed:</strong>
+        <%= wiring_harness.harnesses_completed %>
+      </p>
+
+      <p>
+        <strong>Board Runner:</strong>
+        <%= wiring_harness.user.full_name %>
+      </p>
+
+      <div class="">
+        <%= link_to "Edit", edit_wiring_harness_path(@wiring_harness), class: "btn btn-primary" %>
+        <%= link_to "Back", wiring_harnesses_path, class: "btn btn-primary" %>
+        <%= link_to "Delete", @wiring_harness, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>

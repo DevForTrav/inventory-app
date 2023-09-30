@@ -1,0 +1,13 @@
+<h1>Connectors</h1>
+
+
+
+<%= link_to "<i class=\"bi bi-plus-circle-fill fs-2 float-end d-contents \"></i>".html_safe, 
+            new_wiring_harness_connector_path,
+            data: { turbo_frame: dom_id(WiringHarnessConnector.new) } %>
+
+<%= turbo_frame_tag WiringHarnessConnector.new %>
+
+<div id="wiring_harnesses">
+  <%= render 'index_table', wiring_harness_connectors: @wiring_harness_connectors %>
+</div>

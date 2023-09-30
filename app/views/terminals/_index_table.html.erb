@@ -1,0 +1,27 @@
+<table class="table table-striped">
+  <%= turbo_frame_tag Terminal.new %>
+  <thead class="thead">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Abbr</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody class="align-middle">
+    <% terminals.each do |terminal| %>
+      <tr>
+        <td class="mt-2"><%= terminal.name %></td>
+        <td class="mt-2"><%= terminal.abbreviation %></td>
+        <td class="mt-2"><%= terminal.quantity %></td>
+        <td>
+          <div>
+            <%= link_to "<i class=\"bi bi-eye-fill btn btn-primary\"></i>".html_safe, terminal %>
+            <%= link_to "<i class=\"bi bi-pencil-fill btn btn-success\"></i>".html_safe, edit_terminal_path(terminal) %>
+            <%= link_to "<i class=\"bi bi-archive-fill btn btn-danger\"></i>".html_safe, terminal, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

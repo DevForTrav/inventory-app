@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+T62-14 FEMALE:
+  name: T62-14 FEMALE
+  abbreviation: MyString
+  quantity: 1
+  # prepped_wire: one
+
+SPLICE:
+  name: SPLICE
+  abbreviation: MyString
+  quantity: 1
+  # prepped_wire: two

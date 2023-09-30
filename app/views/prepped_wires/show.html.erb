@@ -1,0 +1,8 @@
+<%= render @prepped_wire %>
+
+<div>
+  <%= link_to "Edit this prepped wire", edit_prepped_wire_path(@prepped_wire) %> |
+  <%= link_to "Back to prepped wires", prepped_wires_path %>
+
+  <%= button_to "Destroy this prepped wire", @prepped_wire, method: :delete %>
+</div>

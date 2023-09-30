@@ -1,0 +1,30 @@
+<table class="table table-striped">
+  <thead class="thead">
+    <tr>
+      <th scope="col">Harness Name</th>
+      <th scope="col">Company</th>
+      <th scope="col">Weekly Goal</th>
+      <th scope="col">In Stock</th>
+      <th scope="col">Board Runner</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody class="align-middle">
+    <% wiring_harnesses.each do |wiring_harness| %>
+      <tr>
+        <td class="mt-2"><%= wiring_harness.name %></td>
+        <td class="mt-2"><%= wiring_harness.company %></td>
+        <td class="mt-2"><%= wiring_harness.weekly_quota %></td>
+        <td class="mt-2"><%= wiring_harness.harnesses_completed %></td>
+        <td class="mt-2"><%= wiring_harness.user.full_name %></td>
+        <td>
+          <div>
+            <%= link_to "<i class=\"bi bi-eye-fill btn btn-primary\"></i>".html_safe, wiring_harness %>
+            <%= link_to "<i class=\"bi bi-pencil-fill btn btn-success\"></i>".html_safe, edit_wiring_harness_path(wiring_harness) %>
+            <%= link_to "<i class=\"bi bi-archive-fill btn btn-danger\"></i>".html_safe, wiring_harness, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

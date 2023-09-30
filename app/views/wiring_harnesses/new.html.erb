@@ -1,0 +1,9 @@
+<h1>New wiring harness</h1>
+
+<%= turbo_frame_tag @wiring_harness do %>
+  <%= render "form", wiring_harness: @wiring_harness %>
+<% end %>
+
+  <div>
+    <%= link_to "Back to wiring harnesses", wiring_harnesses_path %>
+</div>

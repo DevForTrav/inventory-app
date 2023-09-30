@@ -1,0 +1,1 @@
+json.partial! "wiring_harness_connectors/wiring_harness_connector", wiring_harness_connector: @wiring_harness_connector

@@ -1,0 +1,16 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  length: 48
+  terminal_id: T62-14 FEMALE
+  circuit_id: Ri Dash Can Circuit 2
+  uncut_wire_id: RED
+  quantity: 1
+  status: In Stock
+
+# two:
+#   length: 1
+#   terminal: two
+#   prepped_wire: two
+#   quantity: 1
+#   status: MyString

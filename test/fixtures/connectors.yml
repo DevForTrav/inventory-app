@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: dt06-12s
+  part_number: DT06-12SA
+  company: TE Connectivity Deutsch Connectors
+  positions: 12
+  terminal_id: T62-14 FEMALE
+  # prepop: one

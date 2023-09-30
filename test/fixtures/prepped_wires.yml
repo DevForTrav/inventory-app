@@ -1,0 +1,13 @@
+# # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# one:
+#   uncut_wire: one
+#   prepop: one
+#   p1_terminal: MyString
+#   p2_terminal: MyString
+
+# two:
+#   uncut_wire: two
+#   prepop: two
+#   p1_terminal: MyString
+#   p2_terminal: MyString

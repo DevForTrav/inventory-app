@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @terminal %>
+
+<div>
+  <%= link_to "Edit this terminal", edit_terminal_path(@terminal) %> |
+  <%= link_to "Back to terminals", terminals_path %>
+
+  <%= button_to "Destroy this terminal", @terminal, method: :delete %>
+</div>

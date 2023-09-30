@@ -1,0 +1,2 @@
+module PreppedWiresHelper
+end

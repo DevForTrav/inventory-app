@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  batch_for: one
+  batch_for_type: Batch for
+  quantity: 1
+  status: MyString
+  user: one
+
+two:
+  batch_for: two
+  batch_for_type: Batch for
+  quantity: 1
+  status: MyString
+  user: two

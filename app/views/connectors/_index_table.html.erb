@@ -1,0 +1,41 @@
+<table class="table table-striped shadow">
+  <%= turbo_frame_tag Connector.new %>
+  <thead class="thead">
+    <tr>
+      <th scope="col">Name</th>
+      <%# <th scope="col">Abbr</th> %>
+      <th scope="col">Part #</th>
+      <th scope="col">Manufacturer</th>
+      <th scope="col">Positions</th>
+      <th scope="col">Terminal</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody class="align-middle">
+    <% connectors.each do |connector| %>
+      <tr>
+        <td class="mt-2"><%= connector.name %></td>
+        <td class="mt-2"><%= connector.company %></td>
+        <%# TODO: %>
+        <%# < class="mt-2"><%= connector.abbreviation %>
+        <%# TODO: %>
+        <td class="mt-2">C151598</td>
+        <%# TODO: %>
+        <td class="mt-2">12, 14, 15, 16, 30, 29</td>
+        <%# < class="mt-2"><%= connector.p1_terminal.name %>
+        <td class="mt-2"><%= connector.terminals.pluck(:name).reject(&:blank?).join(',') %></td>
+        <%# TODO: %>
+        <td class="mt-2">54</td>
+
+        <td>
+          <div>
+            <%= link_to "<i class=\"bi bi-eye-fill btn btn-primary\"></i>".html_safe, connector %>
+            <%= link_to "<i class=\"bi bi-pencil-fill btn btn-success\"></i>".html_safe, edit_connector_path(connector) %>
+            <%= link_to "<i class=\"bi bi-archive-fill btn btn-danger\"></i>".html_safe, connector, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

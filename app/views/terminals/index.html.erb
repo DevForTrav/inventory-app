@@ -1,0 +1,12 @@
+<h1>Terminals</h1>
+
+<%= link_to "<i class=\"bi bi-plus-circle-fill fs-2 float-end d-contents \"></i>".html_safe, 
+            new_terminal_path,
+            data: { turbo_frame: dom_id(Terminal.new) } %>
+
+<div id="terminals">
+  <%= render 'index_table', terminals: @terminals %>
+</div>
+
+
+

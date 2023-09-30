@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Prepops</h1>
+
+<div id="prepops">
+  <% @prepops.each do |prepop| %>
+    <%= render prepop %>
+    <p>
+      <%= link_to "Show this prepop", prepop %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New prepop", new_prepop_path %>

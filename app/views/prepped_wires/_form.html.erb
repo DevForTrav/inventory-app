@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@prepped_wire, html: {data: {turbo:false}}) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.association :uncut_wire, label_method: :name, value_method: :id %>
+    <%# <%= f.association :prepop %>
+    <%= f.input :length_in_cm %>
+    <%= f.association :p1_terminals, label_method: :abbreviation, value_method: :id %>
+    <%= f.association :p2_terminals, label_method: :name, value_method: :id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

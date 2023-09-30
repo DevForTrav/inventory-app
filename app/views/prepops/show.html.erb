@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @prepop %>
+
+<div>
+  <%= link_to "Edit this prepop", edit_prepop_path(@prepop) %> |
+  <%= link_to "Back to prepops", prepops_path %>
+
+  <%= button_to "Destroy this prepop", @prepop, method: :delete %>
+</div>

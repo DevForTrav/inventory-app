@@ -1,0 +1,31 @@
+<div id="<%= dom_id splice %>">
+ <div class="card shadow" >
+    <div class="card-body">
+      <h3 class="card-title">Splice</h3>
+      <h6 class="card-subtitle mb-2 text-body-secondary"><%= "#{}"%></h6>
+
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+      <p>
+        <strong>Quantity:</strong>
+        <%=  splice.quantity %>
+      </p>
+      <p>
+        <strong>Length:</strong>
+        <%= splice.length %>
+      </p>
+      <div class="card shadow-sm mb-2 p-2">
+        <p>
+          <strong>Circuit:</strong>
+          <%= render splice.circuit %>
+        </p>
+      </div>
+
+      <div class="">
+        <%= link_to "Edit", edit_splice_path(@splice), class: "btn btn-primary" %>
+        <%= link_to "Back", splices_path, class: "btn btn-primary" %>
+        <%# <%= link_to "Delete", , data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>

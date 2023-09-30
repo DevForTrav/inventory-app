@@ -1,0 +1,31 @@
+<table class="table table-striped">
+  <%= turbo_frame_tag UncutWire.new %>
+  <thead class="thead">
+    <tr>
+      <th scope="col">Gauge</th>
+      <th scope="col">Color</th>
+      <th scope="col">Length</th>
+      <th scope="col">Ordered on</th>
+      <th scope="col">Status</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody class="align-middle">
+    <% uncut_wires.each do |uncut_wire| %>
+      <tr>
+        <td class="mt-2"><%= uncut_wire.gauge %></td>
+        <td class="mt-2"><%= uncut_wire.color %></td>
+        <td class="mt-2"><%= "#{uncut_wire.length_in_cm} cm" %></td>
+        <td class="mt-2"><%= uncut_wire.date_ordered %></td>
+        <td class="mt-2"><%= uncut_wire.status.titleize %></td>
+        <td>
+          <div>
+            <%= link_to "<i class=\"bi bi-eye-fill btn btn-primary\"></i>".html_safe, uncut_wire %>
+            <%= link_to "<i class=\"bi bi-pencil-fill btn btn-success\"></i>".html_safe, edit_uncut_wire_path(uncut_wire) %>
+            <%= link_to "<i class=\"bi bi-archive-fill btn btn-danger\"></i>".html_safe, uncut_wire, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

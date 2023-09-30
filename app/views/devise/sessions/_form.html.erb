@@ -1,0 +1,7 @@
+<%# TODO: figure out if turbo frames SHOULD be turned off for this form. %>
+
+<%= simple_form_for(resource, as: resource_name, url: user_session_path, html: { method: :post, data: {turbo:false} }) do |f| %>
+  <%= f.input :email %>
+  <%= f.input :password %>
+  <%= f.button :submit %>
+<% end %>

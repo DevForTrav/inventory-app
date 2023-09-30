@@ -1,0 +1,20 @@
+
+<%= simple_form_for(@connector) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :part_number %>
+    <%= f.input :company %>
+    <%= f.input :positions %>
+
+    <%# Not sure if I need this but it was one of the routes I was playing around with. %>
+    <%# <%= f.input :wiring_harness_id, as: :hidden, input_html: { value: @wiring_harness.id } %> 
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

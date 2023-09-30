@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Errors</h1>
+
+<div id="errors">
+  <% @errors.each do |error| %>
+    <%= render error %>
+    <p>
+      <%= link_to "Show this error", error %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New error", new_error_path %>

@@ -1,0 +1,10 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: RI Dash Can
+  company: Centurion
+  weekly_quota: 50
+  harnesses_completed: 0
+  user: one
+
+

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @connector %>
+
+<div>
+  <%= link_to "Edit this connector", edit_connector_path(@connector) %> |
+  <%= link_to "Back", :back %>
+
+  <%= button_to "Destroy this connector", @connector, method: :delete %>
+</div>

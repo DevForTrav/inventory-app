@@ -1,0 +1,17 @@
+<div class="card ">
+  <div class="card-header">
+    <%= @uncut_wire.name.titleize%> Uncut Wire
+  </div>
+  <div class="card-body">
+    <%= render @uncut_wire %>
+  </div>
+
+  <div class="card-footer text-body-secondary">
+    <%= link_to "Edit this uncut wire", edit_uncut_wire_path(@uncut_wire) %> |
+    <%= link_to "Back to uncut wires", uncut_wires_path %>
+
+    <%= link_to "Destroy this uncut wire", @uncut_wire, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+  </div>
+</div>
+
+<%= render "/prepped_wires/index_table", prepped_wires: @uncut_wire.prepped_wires %>

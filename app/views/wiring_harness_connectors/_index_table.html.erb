@@ -1,0 +1,33 @@
+<table class="table table-striped">
+  <thead class="thead">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Part Number</th>
+      <th scope="col">Company</th>
+      <th scope="col">In Stock</th>
+      <th scope="col">Positions</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody class="align-middle">
+
+    <% wiring_harness_connectors.each do |wiring_harness_connector| %>
+      <%= turbo_frame_tag dom_id(wiring_harness_connector) %>
+      <tr>
+        <td class="mt-2"><%= wiring_harness_connector.connector.name%></td>
+        <td class="mt-2"><%= wiring_harness_connector.connector.part_number %></td>
+        <td class="mt-2"><%= wiring_harness_connector.connector.company %></td>
+        <%# TODO: add in stock column to connector %>
+        <td class="mt-2">True</td>
+        <td class="mt-2"><%= wiring_harness_connector.connector.positions %></td>
+        <td>
+          <div>
+            <%= link_to "<i class=\"bi bi-eye-fill btn btn-primary\"></i>".html_safe, wiring_harness_connector_path(id: wiring_harness_connector.id, wiring_harness_id: @wiring_harness) %>
+            <%= link_to "<i class=\"bi bi-pencil-fill btn btn-success\"></i>".html_safe, edit_wiring_harness_connector_path(id: wiring_harness_connector.id, wiring_harness_id: @wiring_harness), data: {turbo_frame: dom_id(wiring_harness_connector)} %>
+            <%= link_to "<i class=\"bi bi-archive-fill btn btn-danger\"></i>".html_safe, wiring_harness_connector_path(id: wiring_harness_connector.id, wiring_harness_id: @wiring_harness), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

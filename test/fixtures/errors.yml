@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  batch: one
+  quantity: 1
+  description: MyText
+  salvageable: false
+  error_for: one
+  error_for_type: Error for
+
+two:
+  batch: two
+  quantity: 1
+  description: MyText
+  salvageable: false
+  error_for: two
+  error_for_type: Error for

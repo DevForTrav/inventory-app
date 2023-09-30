@@ -1,0 +1,17 @@
+
+
+<%= simple_form_for(@wiring_harness_connector, url: wiring_harness_connectors_path,  html: {data: {turbo:false}} ) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.hidden_field :wiring_harness_id %>
+    <%# <%= f.input :wiring_harness_id, as: :hidden, input_html: { value: @wiring_harness_id } %>  
+    <%= f.association :connector %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+    <%= link_to "Cancel", :back, class: "btn btn-secondary" %>
+  </div>
+<% end %>

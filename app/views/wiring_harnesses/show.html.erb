@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <%= render @wiring_harness %>
+    
+    <div class="col-8 card shadow">
+      <div class="p-4">
+        <div class="row">
+          <h2 class="w-75">Connectors</h2>
+          <div class="col float-right">
+            <%= link_to "Connector", 
+                                  new_wiring_harness_connector_path(@wiring_harness), 
+                                  class: "btn btn-primary text-right",
+                                  data: { turbo_frame: dom_id(WiringHarnessConnector.new) }%>
+          </div>
+        </div>
+        <%= turbo_frame_tag WiringHarnessConnector.new %>
+      </div>
+      <%= render 'wiring_harness_connectors/index_table', wiring_harness_connectors: @wiring_harness_connectors %>
+      <div class="row">
+        <h2 class="w-75">Circuits</h2>
+        <div class="col float-right">
+          <%= link_to "Circuits", 
+                                new_wiring_harness_circuit_path(@wiring_harness), 
+                                class: "btn btn-primary",
+                                data: { turbo_frame: dom_id(Circuit.new) }%>
+        </div>
+        <%= turbo_frame_tag Circuit.new %>
+      </div>
+      <%= render 'circuits/index_table', circuits: @wiring_harness.circuits %>
+      <div class="p-4">
+        <div class="row">
+          <h2 class="w-75">Terminals</h2>
+          <div class="col float-right">
+            <%= link_to "Terminals", 
+                                  new_terminal_path, 
+                                  class: "btn btn-primary text-right",
+                                  data: { turbo_frame: dom_id(Terminal.new) }%>
+          </div>
+        </div>
+        <%= turbo_frame_tag Terminal.new %>
+      </div>
+      <%= render 'terminals/index_table', terminals: @terminals %>
+    </div>
+  </div>
+</div>

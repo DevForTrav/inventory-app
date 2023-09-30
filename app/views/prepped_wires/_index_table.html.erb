@@ -1,0 +1,38 @@
+<table class="table table-striped">
+  <%= turbo_frame_tag PreppedWire.new %>
+  <thead class="thead">
+    <tr>
+      <th scope="col">Wire</th>
+      <th scope="col">Length</th>
+      <th scope="col">P1 Terminal</th>
+      <th scope="col">P2 Terminal</th>
+      <th scope="col">Status</th>
+      <th scope="col">Prepop</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Priority</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody class="align-middle">
+    <% prepped_wires.each do |prepped_wire| %>
+      <tr>
+        <td class="mt-2"><%= prepped_wire.uncut_wire.name %></td>
+        <td class="mt-2"><%= "#{prepped_wire.length_in_cm} cm" %></td>
+        <td class="mt-2"><%= prepped_wire.p1_terminals.name %></td>
+        <td class="mt-2"><%= prepped_wire.p2_terminals.name %></td>
+        <%# TODO %>
+        <td class="mt-2"><%= "N/A" %></td>
+        <td class="mt-2"><%= "N/A" %></td>
+        <td class="mt-2"><%= "N/A" %></td>
+        <td class="mt-2"><%= "N/A" %></td>
+        <td>
+          <div>
+            <%= link_to "<i class=\"bi bi-eye-fill btn btn-primary\"></i>".html_safe, prepped_wire %>
+            <%= link_to "<i class=\"bi bi-pencil-fill btn btn-success\"></i>".html_safe, edit_prepped_wire_path(prepped_wire) %>
+            <%= link_to "<i class=\"bi bi-archive-fill btn btn-danger\"></i>".html_safe, prepped_wire, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

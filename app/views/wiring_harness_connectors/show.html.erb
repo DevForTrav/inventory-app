@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @wiring_harness_connector %>
+
+<div>
+  <%= link_to "Edit this wiring harness connector", edit_wiring_harness_connector_path(@wiring_harness_connector) %> |
+  <%= link_to "Back to wiring harness connectors", wiring_harness_connectors_path %>
+
+  <%= button_to "Destroy this wiring harness connector", @wiring_harness_connector, method: :delete %>
+</div>

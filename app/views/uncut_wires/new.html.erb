@@ -1,0 +1,12 @@
+
+<%= turbo_frame_tag @uncut_wire do %>
+
+  <%= render "shared/remote_modal", title: "New uncut wire" do %>
+    <%= render "form", uncut_wire: @uncut_wire %>
+  <% end %>
+<% end %>
+<br>
+
+<div>
+  <%= link_to "Back to uncut wires", uncut_wires_path %>
+</div>

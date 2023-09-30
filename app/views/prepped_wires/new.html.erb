@@ -1,0 +1,11 @@
+<%= turbo_frame_tag @prepped_wire do %>
+
+  <%= render "shared/remote_modal", title: "New prepped wired" do %>
+    <%= render "form", prepped_wire: @prepped_wire %>
+  <% end %>
+<% end %>
+<br>
+
+<div>
+  <%= link_to "Back to uncut wires", prepped_wires_path %>
+</div>

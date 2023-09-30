@@ -1,0 +1,10 @@
+<h1>Editing circuit</h1>
+  <%= turbo_frame_tag @circuit do %>
+    <%= render "form", circuit: @circuit %>
+  <% end %>
+<br>
+
+<div>
+  <%= link_to "Show this circuit", @circuit %> |
+  <%= link_to "Back to circuits", circuits_path %>
+</div>

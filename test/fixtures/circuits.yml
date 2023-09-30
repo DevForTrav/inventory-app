@@ -1,0 +1,18 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+Ri Dash Can Circuit 2:
+  number: 2
+  position: [1]
+  length: 8
+  p1_terminal_id: T62-14 FEMALE
+  p2_terminal_id: SPLICE
+  uncut_wire_id: red
+  quantity: 1
+
+# two:
+#   number: MyString
+#   position: MyString
+#   length: 1
+#   p1_terminal: two
+#   p2_terminal: two
+#   quantity: 1

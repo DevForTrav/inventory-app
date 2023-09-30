@@ -1,6 +1,26 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  
+  
+  root "home#index"
+  
+  resources :wiring_harnesses, as: 'wiring_harnesses' do
+    resources :wiring_harness_connectors, as: 'connectors'
+    resources :circuits
+  end
+  
+  resources :splices
+  
+  resources :circuits, only: %i[index edit show new] do
+    resources :splices
+  end
+  
+  resources :errors
+  resources :batches
+  resources :connectors
+  resources :prepops
+  resources :terminals
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :uncut_wires
+
+  devise_for :users
 end
