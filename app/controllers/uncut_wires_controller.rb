@@ -58,7 +58,7 @@ class UncutWiresController < ApplicationController
   end
 
   def select_form_name
-    # debugger
+
     # UncutWire.all.collect { |uncut_wire| ["#{uncut_wire.gauge} #{uncut_wire.primary_color}/#{uncut_wire.secondary_color}", uncut_wire.id] }
   end
 
